@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="610.0" styleClass="view" stylesheets="@../../css/Style.css" visible="false" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="src.controllers.fragments.PatientChooseController">
+   <children>
+      <TextField fx:id="searchTextField" layoutX="60.0" layoutY="265.0" prefHeight="25.0" prefWidth="525.0" />
+      <TableView fx:id="patientTable" editable="true" layoutX="35.0" layoutY="28.0" prefHeight="200.0" prefWidth="550.0">
+        <columns>
+          <TableColumn fx:id="patientPesel" prefWidth="116.0" text="Pesel" />
+          <TableColumn fx:id="patientName"  prefWidth="109.0" text="Imie" />
+            <TableColumn fx:id="patientLastName"  prefWidth="104.0" text="Nazwisko" />
+            <TableColumn fx:id="patientBirthdate"  prefWidth="112.0" text="Data urodzenia" />
+            <TableColumn fx:id="patientPhoneNumber"  prefWidth="132.0" text="Telefon" />
+            <TableColumn fx:id="patientEmail"  prefWidth="132.0" text="Email" />
+            <TableColumn fx:id="patientStreet"  prefWidth="166.0" text="Ulica" />
+            <TableColumn fx:id="patientCity"  prefWidth="166.0" text="Miasto" />
+            <TableColumn fx:id="patientPostalCode"  prefWidth="166.0" text="Kod pocztowy" />
+        </columns>
+          <contextMenu>
+              <ContextMenu>
+                  <items>
+                      <MenuItem mnemonicParsing="false" text="Usuń" />
+                  </items>
+              </ContextMenu>
+          </contextMenu>
+      </TableView>
+      <Label layoutX="23.0" layoutY="269.0" prefHeight="17.0" prefWidth="48.0" text="Filtr" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+   </children>
+</AnchorPane>

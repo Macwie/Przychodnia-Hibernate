@@ -1,0 +1,110 @@
+.view {
+    -fx-background-color: #2F3136;
+}
+
+.button {
+    -fx-background-repeat: no-repeat;
+    -fx-text-fill: white;
+    -fx-background-color: #7289da;
+    -fx-background-position: left;
+}
+.button:hover {
+    -fx-background-color: #93A5E6;
+    -fx-scale-y: 1.1;
+}
+
+.table-view{
+    -fx-background-color: transparent;
+    -fx-table-cell-border-color: transparent;
+}
+
+.table-view:focused{
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header-background{
+    -fx-background-color: #36393F;
+    -fx-background-radius: 7 7 0 0;
+}
+
+.table-view .column-header-background .label{
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-background-radius: 7;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+    -fx-background-radius: 7;
+}
+
+.table-view .table-cell{
+    -fx-text-fill: white;
+    -fx-font-family: Calibri;
+    -fx-font-size: 16px;
+}
+
+.table-cell {
+    -fx-alignment: CENTER;
+}
+
+.table-row-cell{
+    -fx-background-color: -fx-table-cell-border-color, #3c3f45;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */
+    -fx-text-alignment: center;
+}
+
+.table-row-cell:odd{
+    -fx-background-color: -fx-table-cell-border-color, #36393F;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */
+}
+
+.table-row-cell:selected {
+    -fx-background-color: -fx-table-cell-border-color, #7289da;
+    -fx-background-insets: 0;
+    -fx-background-radius: 1;
+}
+
+.scroll-pane {
+    -fx-background-color: black;
+}
+
+.scroll-bar:horizontal, .scroll-bar:vertical{
+    -fx-background-color:transparent;
+}
+
+.increment-button, .decrement-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.scroll-bar:horizontal .track,
+.scroll-bar:vertical .track{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0em;
+}
+
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb {
+    -fx-background-color: #23272a;
+    -fx-background-radius: 5em;
+}
+
+.corner {
+    -fx-background-color: transparent;
+}
+
+.text-field {
+    -fx-background-color: #484b51 , #2F3136 , #2F3136;
+    -fx-background-insets: 0 -1 -1 -1, 0 0 0 0, 0 -1 3 -1;
+    -fx-text-fill: white;
+    -fx-background-radius: 0;
+}
+
+.text-field:focused {
+    -fx-background-color: white , #2F3136 , #2F3136;
+    -fx-background-insets: 0 -1 -1 -1, 0 0 0 0, 0 -1 3 -1;
+}

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.152" xmlns:fx="http://javafx.com/fxml/1" fx:controller="src.controllers.ManageExemptionViewController">
+    <children>
+          <TableView fx:id="exemptionTable" layoutX="30.0" layoutY="25.0" prefHeight="460.0" prefWidth="740.0">
+              <columns>
+                  <TableColumn fx:id="exemptionId" prefWidth="99.0" text="Id wizyty" />
+                  <TableColumn fx:id="exemptionSince" prefWidth="298.0" text="Od" />
+                  <TableColumn fx:id="exemptionUntil" prefWidth="342.0" text="Do" />
+              </columns>
+              <contextMenu>
+                  <ContextMenu>
+                      <items>
+                          <MenuItem mnemonicParsing="false" onAction="#deleteExemption" text="Usuń" />
+                      </items>
+                  </ContextMenu>
+              </contextMenu>
+          </TableView>
+            <Button fx:id="backButton" layoutX="360.0" layoutY="561.0" mnemonicParsing="false" onAction="#back" prefHeight="25.0" prefWidth="80.0" text="Wróć" />
+    </children>
+</AnchorPane>

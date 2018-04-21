@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.152" xmlns:fx="http://javafx.com/fxml/1" fx:controller="src.controllers.PatientDetailsController">
+   <children>
+      <Label layoutX="18.0" layoutY="51.0" prefHeight="17.0" prefWidth="58.0" text="Imię:" textFill="WHITE">
+          <font>
+              <Font name="System Bold" size="12.0" />
+          </font></Label>
+      <Label layoutX="18.0" layoutY="28.0" prefHeight="17.0" prefWidth="58.0" text="Pesel:" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="17.0" layoutY="98.0" prefHeight="22.0" prefWidth="97.0" text="Data urodzenia:" textFill="WHITE">
+         <padding>
+            <Insets bottom="5.0" />
+         </padding>
+          <font>
+              <Font name="System Bold" size="12.0" />
+          </font>
+      </Label>
+      <Label layoutX="18.0" layoutY="142.0" prefHeight="17.0" prefWidth="58.0" text="Email:" textFill="WHITE">
+          <font>
+              <Font name="System Bold" size="12.0" />
+          </font></Label>
+      <Label layoutX="18.0" layoutY="120.0" prefHeight="17.0" prefWidth="58.0" text="Telefon:" textFill="WHITE">
+         <padding>
+            <Insets bottom="5.0" />
+         </padding>
+          <font>
+              <Font name="System Bold" size="12.0" />
+          </font>
+      </Label>
+      <Label layoutX="18.0" layoutY="75.0" prefHeight="17.0" prefWidth="58.0" text="Nazwisko:" textFill="WHITE">
+          <font>
+              <Font name="System Bold" size="12.0" />
+          </font></Label>
+      <Label fx:id="name" layoutX="57.0" layoutY="51.0" prefHeight="17.0" prefWidth="97.0" textFill="WHITE" />
+      <Label fx:id="pesel" layoutX="57.0" layoutY="28.0" prefHeight="17.0" prefWidth="104.0" textFill="WHITE" />
+      <Label fx:id="birth" layoutX="116.0" layoutY="98.0" prefHeight="22.0" prefWidth="73.0" textFill="WHITE">
+         <padding>
+            <Insets bottom="5.0" />
+         </padding>
+      </Label>
+      <Label fx:id="email" layoutX="59.0" layoutY="142.0" prefHeight="17.0" prefWidth="110.0" textFill="WHITE" />
+      <Label fx:id="phone" layoutX="73.0" layoutY="120.0" prefHeight="22.0" prefWidth="104.0" textFill="WHITE">
+         <padding>
+            <Insets bottom="5.0" />
+         </padding>
+      </Label>
+      <Label fx:id="lastName" layoutX="83.0" layoutY="75.0" prefHeight="17.0" prefWidth="88.0" textFill="WHITE" />
+      <TableView fx:id="termTable" layoutX="205.0" layoutY="27.0" prefHeight="200.0" prefWidth="578.0">
+        <columns>
+          <TableColumn fx:id="termId" prefWidth="49.0" text="Id" />
+            <TableColumn fx:id="termPlace" prefWidth="134.0" text="Miejsce" />
+            <TableColumn fx:id="termDate" prefWidth="128.0" text="Data" />
+            <TableColumn fx:id="doctorName" prefWidth="128.0" text="Imię lekarza" />
+            <TableColumn fx:id="doctorSurname" prefWidth="138.0" text="Nazwisko lekarza" />
+        </columns>
+      </TableView>
+      <TableView fx:id="prescriptionTable" layoutX="18.0" layoutY="261.0" prefHeight="177.0" prefWidth="369.0">
+        <columns>
+            <TableColumn fx:id="prescId" prefWidth="45.0" text="Id" />
+          <TableColumn fx:id="medicineAmount" prefWidth="80.99998474121094" text="Ilość leków" />
+          <TableColumn fx:id="medicineName" prefWidth="173.0" text="Nazwa leku" />
+            <TableColumn fx:id="prescTermId" prefWidth="69.0" text="Id wizyty" />
+        </columns>
+      </TableView>
+      <TableView fx:id="referralTable" layoutX="415.0" layoutY="261.0" prefHeight="177.0" prefWidth="369.0">
+        <columns>
+          <TableColumn fx:id="referralId" prefWidth="40.0" text="Id" />
+          <TableColumn fx:id="referralIntent" prefWidth="265.0" text="Skierowanie" />
+            <TableColumn fx:id="referralTermId" prefWidth="63.0" text="Id wizyty" />
+        </columns>
+      </TableView>
+      <TableView fx:id="exemptionTable" layoutX="17.0" layoutY="466.0" prefHeight="120.0" prefWidth="767.0">
+        <columns>
+            <TableColumn fx:id="exemptionId" prefWidth="75.0" text="Id" />
+          <TableColumn fx:id="exemptionSince" prefWidth="332.0" text="Od" />
+          <TableColumn fx:id="exemptionUntil" prefWidth="359.0" text="Do" />
+        </columns>
+      </TableView>
+      <Button layoutX="79.0" layoutY="188.0" mnemonicParsing="false" onAction="#back" text="Wróć" />
+      <Label layoutX="465.0" layoutY="6.0" prefHeight="17.0" prefWidth="44.0" text="Wizyty" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="182.0" layoutY="238.0" prefHeight="17.0" prefWidth="51.0" text="Recepty" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="563.0" layoutY="238.0" prefHeight="17.0" prefWidth="73.0" text="Skierowania" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="368.0" layoutY="444.0" prefHeight="17.0" prefWidth="73.0" text="Zwolnienia" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
